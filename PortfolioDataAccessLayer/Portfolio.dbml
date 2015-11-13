@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Database Name="PortfolioDatabase" Class="PortfolioDataContext"
+          xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings"
+              ConnectionString="Data Source=(localdb)\Projects;Initial Catalog=PortfolioDatabase;Integrated Security=True"
+              SettingsObjectName="PortfolioDataAccessLayer.Properties.Settings"
+              SettingsPropertyName="PortfolioDatabaseConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Portfolio" Member="Portfolio">
+    <Type Name="Portfolio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true"
+              CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Bond" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BondQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockQuantity" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Stock_Portfolio" Member="Stock1" ThisKey="Stock" OtherKey="Id" Type="Stock"
+                   IsForeignKey="true" />
+      <Association Name="Bond_Portfolio" Member="Bond1" ThisKey="Bond" OtherKey="Id" Type="Bond" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PriceHistory" Member="PriceHistory">
+    <Type Name="PriceHistory">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true"
+              CanBeNull="false" />
+      <Column Name="Time" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="PriceHistory_Stock" Member="Stock" ThisKey="Id" OtherKey="PriceHistory" Type="Stock" />
+      <Association Name="PriceHistory_Bond" Member="Bond" ThisKey="Id" OtherKey="PriceHistory" Type="Bond" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stock" Member="Stock">
+    <Type Name="Stock">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true"
+              CanBeNull="false" />
+      <Column Name="PriceHistory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Stock_Portfolio" Member="Portfolio" ThisKey="Id" OtherKey="Stock" Type="Portfolio" />
+      <Association Name="PriceHistory_Stock" Member="PriceHistory1" ThisKey="PriceHistory" OtherKey="Id"
+                   Type="PriceHistory" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Coupon" Member="Coupon">
+    <Type Name="Coupon">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true"
+              CanBeNull="false" />
+      <Column Name="Value" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LastDate" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Frequency" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Coupon_Bond" Member="Bond" ThisKey="Id" OtherKey="Coupon" Type="Bond" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Bond" Member="Bond">
+    <Type Name="Bond">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true"
+              CanBeNull="false" />
+      <Column Name="PriceHistory" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Coupon" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Bond_Portfolio" Member="Portfolio" ThisKey="Id" OtherKey="Bond" Type="Portfolio" />
+      <Association Name="Coupon_Bond" Member="Coupon1" ThisKey="Coupon" OtherKey="Id" Type="Coupon" IsForeignKey="true"
+                   DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="PriceHistory_Bond" Member="PriceHistory1" ThisKey="PriceHistory" OtherKey="Id"
+                   Type="PriceHistory" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+</Database>

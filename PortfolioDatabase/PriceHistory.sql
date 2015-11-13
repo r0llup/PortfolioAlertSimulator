@@ -1,0 +1,6 @@
+﻿CREATE TABLE [dbo].[PriceHistory]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [Time] DATETIME NOT NULL, 
+    [Price] MONEY NOT NULL
+)

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="70a58349-e102-49f2-afde-203c2a58e373" ChangeDateTime="06/09/2013 19:41:28">
+    <Property Name="ElementName" Value="[dbo].[PriceHistory].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PriceHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Time" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ad3a1dee-4ee5-4792-b4ca-385359435582" ChangeDateTime="06/09/2013 19:47:50">
+    <Property Name="ElementName" Value="[dbo].[PriceHistory].[Price]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PriceHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Time" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="efe147e3-f11a-4e05-8318-5fa744ee4c41" ChangeDateTime="06/09/2013 19:47:56">
+    <Property Name="ElementName" Value="[dbo].[PriceHistory].[Time]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PriceHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fac39111-1465-4575-8404-672782c86568" ChangeDateTime="06/09/2013 19:58:26">
+    <Property Name="ElementName" Value="[dbo].[Bond].[CouponValue]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Bond]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Coupon" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0be9d1c2-d13a-4fb4-833f-6e39e2768c6e" ChangeDateTime="06/10/2013 18:49:19">
+    <Property Name="ElementName" Value="[pdo].[Portfolio].[Time]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[pdo].[Portfolio]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Name" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="dee06563-bdea-4603-90b1-61e42b5db302" ChangeDateTime="06/10/2013 20:11:41">
+    <Property Name="ElementName" Value="[dbo].[Portfolio].[Stock]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Portfolio]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BondQuantity" />
+  </Operation>
+</Operations>

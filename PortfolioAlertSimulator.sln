@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioServiceLibrary", "PortfolioServiceLibrary\PortfolioServiceLibrary.csproj", "{15B3E0D2-6217-493A-A690-158C497F5318}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PortfolioDatabase", "PortfolioDatabase\PortfolioDatabase.sqlproj", "{0E210142-4716-4516-8DE4-8D1AD6FCA083}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortfolioDataAccessLayer", "PortfolioDataAccessLayer\PortfolioDataAccessLayer.csproj", "{C700AE55-5333-423D-8A13-05A8E10312DB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15B3E0D2-6217-493A-A690-158C497F5318}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E210142-4716-4516-8DE4-8D1AD6FCA083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E210142-4716-4516-8DE4-8D1AD6FCA083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E210142-4716-4516-8DE4-8D1AD6FCA083}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0E210142-4716-4516-8DE4-8D1AD6FCA083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E210142-4716-4516-8DE4-8D1AD6FCA083}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E210142-4716-4516-8DE4-8D1AD6FCA083}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C700AE55-5333-423D-8A13-05A8E10312DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C700AE55-5333-423D-8A13-05A8E10312DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C700AE55-5333-423D-8A13-05A8E10312DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C700AE55-5333-423D-8A13-05A8E10312DB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

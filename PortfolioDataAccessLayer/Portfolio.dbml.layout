@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Portfolio">
+  <DataContextMoniker Name="/PortfolioDataContext" />
+  <nestedChildShapes>
+    <classShape Id="242e3db0-bb95-4fd0-84af-5189279848aa" absoluteBounds="5.75, 0.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/PortfolioDataContext/Portfolio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e81de369-76cb-4268-a36b-f3de2d41a130" absoluteBounds="5.765, 1.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="44e6c673-8bef-451b-b5ed-0b07543a1d60" absoluteBounds="5.75, 3.625, 2, 1.3862939453124996">
+      <DataClassMoniker Name="/PortfolioDataContext/PriceHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="db25e097-6824-4a74-b117-c42e7a27bb28" absoluteBounds="5.765, 4.085, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="433e70e1-ac84-46b8-953b-77c3acaf524c" absoluteBounds="8.375, 1.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/PortfolioDataContext/Stock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6e52ae0b-ae0a-4b97-8770-ac3924eb0908" absoluteBounds="8.39, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(8.375 : 1.72199625651042); (7.75 : 1.72199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PortfolioDataContext/Stock/Stock_Portfolio" />
+      <nodes>
+        <classShapeMoniker Id="433e70e1-ac84-46b8-953b-77c3acaf524c" />
+        <classShapeMoniker Id="242e3db0-bb95-4fd0-84af-5189279848aa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(7.75 : 4.31814697265625); (9.375 : 4.31814697265625); (9.375 : 2.31899251302083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PortfolioDataContext/PriceHistory/PriceHistory_Stock" />
+      <nodes>
+        <classShapeMoniker Id="44e6c673-8bef-451b-b5ed-0b07543a1d60" />
+        <classShapeMoniker Id="433e70e1-ac84-46b8-953b-77c3acaf524c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="1ca4196c-86d0-41dd-ae90-e1276fd32831" absoluteBounds="0.5, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/PortfolioDataContext/Coupon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0a08e2c0-35e2-4f0d-b0ce-7ff363604099" absoluteBounds="0.51500000000000012, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3a6e0acd-755e-4a9c-972d-3c1de036237e" absoluteBounds="3.125, 1.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/PortfolioDataContext/Bond" />
+      <nestedChildShapes>
+        <elementListCompartment Id="be2cb9b5-b66c-4727-b634-fb610ea41d1c" absoluteBounds="3.1399999999999997, 1.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.125 : 1.81814697265625); (5.75 : 1.81814697265625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PortfolioDataContext/Bond/Bond_Portfolio" />
+      <nodes>
+        <classShapeMoniker Id="3a6e0acd-755e-4a9c-972d-3c1de036237e" />
+        <classShapeMoniker Id="242e3db0-bb95-4fd0-84af-5189279848aa" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.81814697265625); (3.125 : 1.81814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/PortfolioDataContext/Coupon/Coupon_Bond" />
+      <nodes>
+        <classShapeMoniker Id="1ca4196c-86d0-41dd-ae90-e1276fd32831" />
+        <classShapeMoniker Id="3a6e0acd-755e-4a9c-972d-3c1de036237e" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.75 : 4.31814697265625); (4.125 : 4.31814697265625); (4.125 : 2.5112939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PortfolioDataContext/PriceHistory/PriceHistory_Bond" />
+      <nodes>
+        <classShapeMoniker Id="44e6c673-8bef-451b-b5ed-0b07543a1d60" />
+        <classShapeMoniker Id="3a6e0acd-755e-4a9c-972d-3c1de036237e" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

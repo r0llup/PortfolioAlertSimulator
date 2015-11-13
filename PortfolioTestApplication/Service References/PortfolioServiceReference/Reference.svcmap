@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9faf0024-f72b-4fbb-a430-78bc4db8c087" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8733/Design_Time_Addresses/PortfolioServiceLibrary/PortfolioService/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="e7351a8b-b1ff-4b99-8ef0-368f0828c5fe" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/PortfolioServiceLibrary/PortfolioService/mex" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="b20f451f-5869-421e-9e76-11fcd52474ff" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/PortfolioServiceLibrary/PortfolioService/mex" />
+    <MetadataFile FileName="service1.xsd" MetadataType="Schema" ID="5874c847-7015-4948-a347-3f0ec41933f0" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/PortfolioServiceLibrary/PortfolioService/mex" />
+    <MetadataFile FileName="PortfolioServiceLibrary.xsd" MetadataType="Schema" ID="bd955b42-4fb3-4ba2-85cc-ba328ea63588" SourceId="1" SourceUrl="http://localhost:8733/Design_Time_Addresses/PortfolioServiceLibrary/PortfolioService/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
